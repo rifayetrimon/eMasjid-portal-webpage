@@ -20,7 +20,7 @@ export default function Navbar() {
             href="/"
             className={`font-medium ${
               isHome
-                ? "text-white hover:text-blue-300"
+                ? "text-white hover:text-green-600"
                 : "text-gray-800 hover:text-blue-600"
             }`}
           >
@@ -32,7 +32,7 @@ export default function Navbar() {
             href="#"
             className={`font-medium ${
               isHome
-                ? "text-white hover:text-blue-300"
+                ? "text-white hover:text-green-600"
                 : "text-gray-800 hover:text-blue-600"
             }`}
           >
@@ -44,7 +44,7 @@ export default function Navbar() {
             href="#"
             className={`font-medium ${
               isHome
-                ? "text-white hover:text-blue-300"
+                ? "text-white hover:text-green-600"
                 : "text-gray-800 hover:text-blue-600"
             }`}
           >
@@ -56,7 +56,7 @@ export default function Navbar() {
             href="#"
             className={`font-medium ${
               isHome
-                ? "text-white hover:text-blue-300"
+                ? "text-white hover:text-green-600"
                 : "text-gray-800 hover:text-blue-600"
             }`}
           >
@@ -68,7 +68,7 @@ export default function Navbar() {
             href="#"
             className={`font-medium ${
               isHome
-                ? "text-white hover:text-blue-300"
+                ? "text-white hover:text-green-600"
                 : "text-gray-800 hover:text-blue-600"
             }`}
           >

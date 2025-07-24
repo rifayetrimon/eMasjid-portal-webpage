@@ -6,11 +6,11 @@ export default function Menu() {
         backgroundImage: "url('/images/menu/bg.png')",
       }}
     >
-      <h2 className="text-4xl font-bold text-center mb-12 text-black">
+      <h2 className="text-4xl font-bold text-center mb-12 text-[#21536E]">
         Kelebihan e-Masjid
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-black">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-[#21536E]">
         {[
           {
             icon: "/icons/cloud.svg",
