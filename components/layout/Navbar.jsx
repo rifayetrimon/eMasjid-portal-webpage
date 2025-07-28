@@ -53,13 +53,13 @@ export default function Navbar() {
 
       {/* Mobile Nav Menu */}
       {menuOpen && (
-        <ul className="md:hidden mt-4 flex flex-col items-start gap-4 bg-white rounded-md p-4 shadow-md">
+        <ul className="md:hidden mt-4 flex flex-col items-start gap-4 bg-[#164776] rounded-md p-4 shadow-md">
           {navItems.map((item) => (
             <li key={item.name}>
               <a
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-gray-800 hover:text-[#0C9F77] font-medium"
+                className="text-white hover:text-[#0C9F77] font-medium"
               >
                 {item.name}
               </a>
