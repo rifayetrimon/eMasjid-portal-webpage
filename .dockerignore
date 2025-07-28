@@ -1,0 +1,8 @@
+# .dockerignore
+node_modules
+.next
+.dockerignore
+Dockerfile
+*.log
+.vscode
+.env*
