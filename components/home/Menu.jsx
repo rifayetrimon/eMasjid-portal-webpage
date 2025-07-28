@@ -46,7 +46,7 @@ export default function Menu() {
 
   return (
     <div
-      className="relative bg-cover bg-center py-16 px-4"
+      className="relative bg-cover h-[400px] bg-center py-16 px-4"
       style={{ backgroundImage: "url('/images/menu/bg.png')" }}
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#21536E]">
