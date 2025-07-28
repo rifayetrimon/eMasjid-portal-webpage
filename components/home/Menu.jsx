@@ -45,11 +45,8 @@ export default function Menu() {
   ];
 
   return (
-    <div
-      className="relative bg-cover h-[400px] bg-center py-16 px-4"
-      style={{ backgroundImage: "url('/images/menu/bg.png')" }}
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#21536E]">
+    <div className="bg-[#F1F1F1] py-16 px-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-[#21536E]">
         Kelebihan e-Masjid
       </h2>
 
@@ -85,10 +82,12 @@ export default function Menu() {
                 />
               </div>
 
-              <h3 className="text-lg md:text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 {item.title}
               </h3>
-              <p className="text-sm leading-relaxed">{item.text}</p>
+              <p className="text-sm sm:text-base leading-relaxed">
+                {item.text}
+              </p>
             </div>
           );
         })}

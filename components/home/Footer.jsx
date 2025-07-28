@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-[#164776] text-white py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-        {/* Left: Image */}
-        <div className="flex justify-center md:justify-start">
+        {/* Left: Image - Centered on mobile */}
+        <div className="w-full md:w-auto flex justify-center md:justify-start">
           <Image
             src="/images/banner/icon.png"
             alt="Footer Icon"
@@ -18,11 +17,11 @@ export default function Footer() {
 
         {/* Right: Line + Text Content */}
         <div className="flex w-full md:w-auto gap-6 items-start md:items-stretch justify-between md:justify-start">
-          {/* Vertical Line */}
+          {/* Vertical Line (hidden on mobile) */}
           <div className="hidden md:block w-[2px] bg-white" />
 
           {/* Text & Social Icons */}
-          <div className="text-left">
+          <div className="text-left w-full">
             <h3 className="text-2xl font-semibold">
               Majlis Agama Islam Selangor (MAIS)
             </h3>
@@ -53,7 +52,7 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex gap-5 mt-5 text-xl">
-              <a href="#" className="hover:text-gray-300" aria-label="Facebook">
+              <a href="#" aria-label="Facebook">
                 <Image
                   src="/icons/fb.svg"
                   alt="Facebook"
@@ -62,7 +61,7 @@ export default function Footer() {
                   className="hover:opacity-80 transition-opacity"
                 />
               </a>
-              <a href="#" className="hover:text-gray-300" aria-label="Twitter">
+              <a href="#" aria-label="Instagram">
                 <Image
                   src="/icons/instagram.svg"
                   alt="Instagram"
@@ -71,14 +70,10 @@ export default function Footer() {
                   className="hover:opacity-80 transition-opacity"
                 />
               </a>
-              <a
-                href="#"
-                className="hover:text-gray-300"
-                aria-label="Instagram"
-              >
+              <a href="#" aria-label="X">
                 <Image
                   src="/icons/x.svg"
-                  alt="x"
+                  alt="X"
                   width={24}
                   height={24}
                   className="hover:opacity-80 transition-opacity"
@@ -87,6 +82,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Centered Copyright */}
+      <div className="mt-10 text-center text-sm text-gray-300">
+        &copy; {new Date().getFullYear()} Hak Cipta Terpelihara © 2025 Awfatech
+        Global Sdn Bhd Team.
       </div>
     </footer>
   );
