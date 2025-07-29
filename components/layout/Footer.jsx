@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "../../lib/assetPath";
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         {/* Left: Image - Centered on mobile */}
         <div className="w-full md:w-auto flex justify-center md:justify-start">
           <Image
-            src="/images/banner/icon.png"
+            src={assetPath("/images/banner/icon.png")}
             alt="Footer Icon"
             width={150}
             height={150}
@@ -54,7 +55,7 @@ export default function Footer() {
             <div className="flex gap-5 mt-5 text-xl">
               <a href="#" aria-label="Facebook">
                 <Image
-                  src="/icons/fb.svg"
+                  src={assetPath("/icons/fb.svg")}
                   alt="Facebook"
                   width={24}
                   height={24}
@@ -63,7 +64,7 @@ export default function Footer() {
               </a>
               <a href="#" aria-label="Instagram">
                 <Image
-                  src="/icons/instagram.svg"
+                  src={assetPath("/icons/instagram.svg")}
                   alt="Instagram"
                   width={24}
                   height={24}
@@ -72,7 +73,7 @@ export default function Footer() {
               </a>
               <a href="#" aria-label="X">
                 <Image
-                  src="/icons/x.svg"
+                  src={assetPath("/icons/x.svg")}
                   alt="X"
                   width={24}
                   height={24}

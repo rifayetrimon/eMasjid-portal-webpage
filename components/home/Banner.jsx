@@ -1,8 +1,12 @@
+import { assetPath } from "../../lib/assetPath";
+
 export default function Banner() {
   return (
     <div
       className="relative min-h-[600px] md:min-h-[700px] bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/banner/bg.png')" }}
+      style={{
+        backgroundImage: `url('${assetPath("/images/banner/bg.png")}')`,
+      }}
     >
       {/* Semi-transparent black overlay */}
       <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
@@ -11,7 +15,7 @@ export default function Banner() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4 py-12">
         {/* Logo Icon */}
         <img
-          src="/images/banner/icon.png"
+          src={assetPath("/images/banner/icon.png")}
           alt="Masjid Logo"
           width={100}
           height={100}

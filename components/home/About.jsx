@@ -1,3 +1,5 @@
+import { assetPath } from "../../lib/assetPath";
+
 export default function About() {
   return (
     <section className="py-16 px-6 bg-white">
@@ -5,7 +7,7 @@ export default function About() {
         {/* Left: Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src="/images/about/about.png"
+            src={assetPath("/images/about/about.png")}
             alt="About Us"
             className="w-[350px] h-[250px] rounded-lg shadow-md"
           />

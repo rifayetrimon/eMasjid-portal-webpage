@@ -1,5 +1,6 @@
 "use client";
 
+import { assetPath } from "../../lib/assetPath";
 import { useState } from "react";
 
 export default function Menu() {
@@ -7,7 +8,7 @@ export default function Menu() {
 
   const features = [
     {
-      icon: "/icons/cloud.svg",
+      icon: assetPath("/icons/cloud.svg"),
       title: "Selamat & Terjamin",
       text: (
         <>
@@ -16,7 +17,7 @@ export default function Menu() {
       ),
     },
     {
-      icon: "/icons/profile.svg",
+      icon: assetPath("/icons/profile.svg"),
       title: "Mesra Pengguna",
       text: (
         <>
@@ -25,7 +26,7 @@ export default function Menu() {
       ),
     },
     {
-      icon: "/icons/time.svg",
+      icon: assetPath("/icons/time.svg"),
       title: "Akses 24/7",
       text: (
         <>
@@ -34,7 +35,7 @@ export default function Menu() {
       ),
     },
     {
-      icon: "/icons/pc.svg",
+      icon: assetPath("/icons/pc.svg"),
       title: "Kemaskini Automatik",
       text: (
         <>
