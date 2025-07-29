@@ -10,7 +10,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Utama", href: "/" },
+    { name: "Utama", href: "" },
     { name: "Info eMasjid", href: "#" },
     { name: "Carian Masjid", href: "#" },
     { name: "Semakan Permohonan", href: "#" },
