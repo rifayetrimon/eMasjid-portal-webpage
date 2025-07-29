@@ -3,27 +3,34 @@ FROM node:21 AS builder
 
 WORKDIR /app
 
-# Install Bun (because you use it in your project)
+# Install Bun globally
 RUN npm install -g bun
 
 # Copy and install dependencies
-COPY package.json ./
+COPY package.json bun.lock ./
 RUN bun install
 
-# Copy rest of the code
+# Copy rest of the project files
 COPY . .
 
-# Build Next.js project
+# Set environment variable for basePath
+ENV NEXT_PUBLIC_BASE_PATH=/masjid
+
+# Build the Next.js app with standalone output
 RUN bun run build
 
-# Stage 2: Run with Bun
-FROM oven/bun:1.1.4
+# Stage 2: Run with Node.js for standalone output
+FROM node:21-slim AS runner
 
 WORKDIR /app
 
-# Copy build output and required files only
-COPY --from=builder /app ./
+# Only copy the built output
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
 
+# Expose the production port
 EXPOSE 3000
 
-CMD ["bun", "start"]
+# Run the standalone server
+CMD ["node", "server.js"]
